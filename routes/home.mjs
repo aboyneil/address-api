@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <body style="background-color: black; display: flex; align-items: center; justify-content: center;">
     <span style="color: white; font-family: 'Roboto';">
-    Welcome to Aboy's Address API!
+    Welcome to SDevTech's Address API!
     </span>
     </body>
     </head>
