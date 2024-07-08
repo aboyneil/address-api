@@ -3,6 +3,7 @@ import route from '../constants/routePath.mjs';
 import { 
     getAllBarangays, 
     getBarangayByID,
+    getBarangayByBarangayCode,
     getBarangaysByCityMunCode
  } from "../controllers/barangay-controller.mjs";
 
@@ -14,6 +15,10 @@ router.get(route.GET_ALL, (req, res) => {
 
 router.get(route.GET_BY_ID, (req, res) => {
     getBarangayByID(req.params.id).then(result => res.send(result));
+});
+
+router.get(route.GET_BY_BARANGAY_CODE, (req, res) => {
+    getBarangayByBarangayCode(req.params.id).then(result => res.send(result));
 });
 
 router.get(route.GET_BY_CITY_MUNICIPALITY_CODE, (req, res) => {

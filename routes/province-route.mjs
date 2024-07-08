@@ -3,6 +3,7 @@ import route from '../constants/routePath.mjs';
 import { 
     getAllProvinces, 
     getProvinceByID,
+    getProvinceByProvinceCode,
     getProvincesByRegionCode
  } from "../controllers/province-controller.mjs";
 
@@ -14,6 +15,10 @@ router.get(route.GET_ALL, (req, res) => {
 
 router.get(route.GET_BY_ID, (req, res) => {
     getProvinceByID(req.params.id).then(result => res.send(result));
+});
+
+router.get(route.GET_BY_PROVINCE_CODE, (req, res) => {
+    getProvinceByProvinceCode(req.params.id).then(result => res.send(result));
 });
 
 router.get(route.GET_BY_REGION_CODE, (req, res) => {

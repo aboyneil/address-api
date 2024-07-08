@@ -9,6 +9,10 @@ export const getCityMunicipalityByID = async (id) => {
     return await CityMunicipality.findOne({id: id}) || false;
 };
 
+export const getCityMunicipalityByCityMunicipalityCode = async (citymunCode) => {
+    return await CityMunicipality.findOne({citymunCode: citymunCode}) || false;
+};
+
 
 export const getCityMunicipalityByRegionCode = async (provCode) => {
     return await CityMunicipality.find({provCode: provCode}) || [];

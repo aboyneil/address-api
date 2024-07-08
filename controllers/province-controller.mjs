@@ -9,6 +9,10 @@ export const getProvinceByID = async (id) => {
     return await Province.findOne({id: id}) || false;
 };
 
+export const getProvinceByProvinceCode = async (provCode) => {
+    return await Province.findOne({provCode: provCode}) || false;
+};
+
 
 export const getProvincesByRegionCode = async (regCode) => {
     return await Province.find({regCode: regCode}) || [];
